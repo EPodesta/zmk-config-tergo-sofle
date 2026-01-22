@@ -22,6 +22,11 @@
 /* Miryoku-ish tuning */
 #define TAPPING_TERM 280
 #define QUICK_TAP    175
+#define U_UND &kp LC(Z)
+#define U_RDO &kp LC(LS(Z))
+#define U_CPY &kp LC(C)
+#define U_PST &kp LC(V)
+#define U_CUT &kp LC(X)
 
 / {
   behaviors {
@@ -145,7 +150,7 @@
 
         /* Right */
         &none            &none         &none         &none         &none         &none
-        &kp LC(LS(Z))    &kp C_PASTE   &kp C_COPY    &kp C_CUT     &kp C_UNDO    &msc SCRL_UP
+        &kp LC(LS(Z))    &kp U_PST     &kp U_CPY     &kp U_CUT     &kp U_UND     &msc SCRL_UP
         &kp CAPS         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &msc SCRL_DOWN
         &none            &kp INS       &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &none
 
@@ -280,12 +285,12 @@
         &none            &none         &none            &none            &none            &none            &none
 
         /* Thumbs */
-                         &none         &none         &none            &none            &trans
+                         &none         &none            &none            &none            &trans
 
         /* Right */
-        &kp LC(LS(Z))    &kp C_PASTE   &kp C_COPY       &kp C_CUT        &kp C_UNDO       &none
+        &kp U_RDO        &kp U_PST     &kp U_CPY        &kp U_CUT        &kp U_UND        &none
         &none            &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &none
-        &none            &none         &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP      &msc SCRL_RIGHT   &none
+        &none            &none         &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &msc SCRL_RIGHT  &none
 
         /* Thumbs */
         &mkp RCLK        &mkp LCLK     &mkp MCLK        &none            &none
