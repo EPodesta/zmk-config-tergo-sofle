@@ -57,32 +57,39 @@
       bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
     };
 
-    rgb_val_morph: rgb_val_morph {
+    rgb_toggle_morph: rgb_toggle_morph { 
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      mods = <MOD_LSFT>;
-      bindings = <&rgb_val_dec &rgb_val_inc>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      bindings = <&rgb_ug RGB_TOG>, <&rgb_ug RGB_OFF>;
+    };
+
+    rgb_eff_morph: rgb_val_morph {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
     };
 
     rgb_hue_morph: rgb_hue_morph {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      mods = <MOD_LSFT>;
-      bindings = <&rgb_hue_dec &rgb_hue_inc>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
     };
 
     rgb_sat_morph: rgb_sat_morph {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      mods = <MOD_LSFT>;
-      bindings = <&rgb_sat_dec &rgb_sat_inc>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
     };
 
     vol_morph: vol_morph {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      mods = <MOD_LSFT>;
-      bindings = <&kp C_VOL_DN &kp C_VOL_UP>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
   };
 
@@ -261,7 +268,7 @@
                          &none              &none            &trans           &none            &none
 
         /* Right */
-        &none            &rgb_toggle        &rgb_mode        &rgb_hue_morph    &rgb_sat_morph   &rgb_val_morph
+        &none            &rgb_toggle_morph        &none        &rgb_hue_morph    &rgb_sat_morph   &rgb_eff_morph
         &none            &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN      &kp C_VOL_UP     &kp C_NEXT
         &none            &none              &out OUT_TOG     &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3
 
