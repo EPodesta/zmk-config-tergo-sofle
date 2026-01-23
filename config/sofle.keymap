@@ -217,7 +217,7 @@
     /* =========================
      * MEDIA (RGB/BT/Output/Power)
      * ========================= */
-    media_layer 
+    media_layer {
       display-name = "Media";
       bindings = <
         /* Left */  /* Right */ 
