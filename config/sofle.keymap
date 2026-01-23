@@ -122,7 +122,7 @@
         &kp GRAVE        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5 &kp N6           &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
         &kp EQUAL        &kp Q         &kp W         &kp F         &kp P         &kp B &kp J            &kp L         &kp U         &kp Y         &kp SEMI      &kp QUOT
         &kp LBKT         &hm LGUI A    &hm LALT R    &hm LCTRL S   &hm LSHFT T   &kp G &kp M            &hm RSHFT N   &hm RCTRL E   &hm RALT I    &hm RGUI O    &kp RBKT
-        &kp LS(LBKT)     &kp X         &kp C         &kp D         &kp V         &kp Z         &none &none            &kp LS(LBKT)  &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(RBKT)
+        &kp LS(LBKT)     &kp X         &kp C         &kp D         &kp V         &kp Z         &none &none  &kp K   &kp H   &kp COMMA &kp DOT &kp FSLH  &kp LS(RBKT)
         /* Thumbs (center) */ /* Thumbs (right) */ 
                          &none         &none         &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB &lt SYM ENTER     &lt NUM BSPC   &lt FUN DEL     &none         &none
 
@@ -161,9 +161,8 @@
         /* Left */ /* Right */
         &none            &none         &none         &none         &none         &none &none            &none         &none         &none         &none         &none
         &none            &kp LBKT      &kp N7        &kp N8        &kp N9        &kp RBKT &none            &none         &none         &none         &none         &none
-        &none            &kp SEMI      &kp N4        &kp N5        &kp N6        &kp EQUAL
-        &none            &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI      &none &none            &none         &none         &none         &none         &none         &none
-        &none            &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp BSLH      &none
+        &none            &kp SEMI      &kp N4        &kp N5        &kp N6        &kp EQUAL &none            &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI      &none 
+        &none            &kp GRAVE     &kp N1        &kp N2        &kp N3        &kp BSLH      &none &none            &none         &none         &none         &none         &none         &none
 
         /* Thumbs */  /* Thumbs */ 
                          &none         &none         &kp GT        &kp N0        &kp MINUS &none            &trans        &none         &none         &none
@@ -202,8 +201,7 @@
         &none            &none         &none         &none         &none         &none &none            &none         &none         &none         &none         &none
         &none            &kp F12       &kp F7        &kp F8        &kp F9        &kp PSCRN &none            &none         &none         &none         &none         &none
         &none            &kp F11       &kp F4        &kp F5        &kp F6        &kp INS &none            &kp RSHFT     &kp RCTRL     &kp RALT      &kp RGUI      &none
-        &none            &kp F10       &kp F1        &kp F2        &kp F3        &kp PAUSE_BREAK     &none
-        &none            &none         &none         &none         &none         &none         &none
+        &none            &kp F10       &kp F1        &kp F2        &kp F3        &kp PAUSE_BREAK     &none &none            &none         &none         &none         &none         &none         &none
 
         /* Thumbs */ /* Thumbs */
                          &none         &none         &kp K_APP       &kp SPACE     &kp TAB &none            &none         &trans        &none         &none
@@ -241,11 +239,10 @@
       display-name = "Mouse";
       bindings = <
         /* Left */
-        &none            &none         &none            &none            &none            &none /* Right */ U_RDO        U_PST     U_CPY        U_CUT        U_UND        &none
-        &none            &none         &none            &none            &none            &none &none            &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &none
-        &none            &kp LGUI      &kp LALT         &kp LCTRL        &kp LSHFT        &none
-        &none            &none         &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &msc SCRL_RIGHT  &none
-        &none            &none         &none            &none            &none            &none            &none
+        &none            &none         &none            &none            &none            &none /* Right */ &none            &none         &none            &none            &none            &none
+        &none            &none         &none            &none            &none            &none U_RDO        U_PST     U_CPY        U_CUT        U_UND        &none
+        &none            &kp LGUI      &kp LALT         &kp LCTRL        &kp LSHFT        &none &none            &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &none
+        &none            &none         &none            &none            &none            &none            &none &none            &none         &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &msc SCRL_RIGHT  &none
 
         /* Thumbs */
                          &none         &none            &none            &none            &trans
